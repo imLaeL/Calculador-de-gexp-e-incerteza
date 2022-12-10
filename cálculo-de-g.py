@@ -141,13 +141,6 @@ try:
 
             except KeyboardInterrupt:
                 print('\n\rAté mais, espero que o script tenha sido útil :)')
-    
-    else:
-        try:
-            calcula_incerteza()
-        
-        except KeyboardInterrupt:
-            print ('\n\rAté mais, espero que o script tenha sido útil :)')
 
 except KeyboardInterrupt:
     print ('\n\rAté mais, espero que o script tenha sido útil :)')
