@@ -42,6 +42,8 @@ def calcula_gexp ():
     
     if continuar == 'S' or continuar == 's':
         calcula_incerteza()
+    elif continuar == 'N' or continuar == 'n':
+        print('\n\rAté mais, espero que o script tenha sido útil :)')
 
 def calcula_incerteza ():
     
@@ -56,6 +58,13 @@ def calcula_incerteza ():
     parte2 = parte1 / gexp
     parte3 = parte2 * 100
     print(f'O resultado é de {parte3:,.4f}%')
+    time.sleep(1)
+    repetir = input('\n\rDeseja utilizar outro valor para gexp?(S/N): ')
+    
+    if repetir == 'S' or repetir == 's':
+        calcula_gexp()
+    elif repetir == 'N' or repetir == 'n':
+        print('\n\rAté mais, espero que o script tenha sido útil :)')
 
 def calcula_incerteza2 ():
     gexp = float(input("Digite o valor de gexp encontrado: "))
@@ -71,6 +80,15 @@ def calcula_incerteza2 ():
     parte2 = parte1 / gexp
     parte3 = parte2 * 100
     print(f'O resultado é de {parte3:,.4f}%')
+    time.sleep(1)
+    repetir = input('\n\rDeseja utilizar outro valor para gexp?(S/N): ')
+    
+    if repetir == 'S' or repetir == 's':
+        calcula_incerteza2()
+    elif repetir == 'N' or repetir == 'n':
+        print('\n\rAté mais, espero que o script tenha sido útil :)')
+    
+
 
 print('''
    █████████        ████                  ████              █████                 
@@ -97,7 +115,7 @@ print('''
  ░███░███ ░███░███ ░░░░███████ ░███ ░░░  ░███   ░███████░   ███░   ███████        
  ░███░███ ░███░███  ██░███░░░  ░███      ░███ ██░███░░░   ███░   ████░░███        
  ████████ ████░░██████░░██████ █████     ░░█████░░██████ ████████░░████████       
-░░░░░░░░ ░░░░░ ░░░░░░  ░░░░░░ ░░░░░       ░░░░░  ░░░░░░ ░░░░░░░░░ ░░░░░░░░                                                                                                                                                                
+░░░░░░░░ ░░░░░ ░░░░░░  ░░░░░░ ░░░░░       ░░░░░  ░░░░░░ ░░░░░░░░░ ░░░░░░░░        
 \n
 ''')
 
@@ -106,14 +124,30 @@ print('''
             \t\t[2] Calcular incerteza
 ''')
 
-escolha = int(input("O que deseja fazer?(1/2): "))
+try:
+    escolha = int(input("O que deseja fazer?(1/2): "))
+    
+    if escolha == 1:
+        try:
+            calcula_gexp()
+    
+        except KeyboardInterrupt:
+            print ('\n\rAté mais, espero que o script tenha sido útil :)')
 
-if escolha == 1:
-    calcula_gexp()
+    elif escolha == 2:
+        if gexp == 0:
+            try:
+                calcula_incerteza2()
 
-elif escolha == 2:
-    if gexp == 0:
-        calcula_incerteza2()
+            except KeyboardInterrupt:
+                print('\n\rAté mais, espero que o script tenha sido útil :)')
+    
     else:
-        calcula_incerteza()
+        try:
+            calcula_incerteza()
+        
+        except KeyboardInterrupt:
+            print ('\n\rAté mais, espero que o script tenha sido útil :)')
 
+except KeyboardInterrupt:
+    print ('\n\rAté mais, espero que o script tenha sido útil :)')
