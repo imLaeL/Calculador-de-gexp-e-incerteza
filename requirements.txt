@@ -1,3 +1,1 @@
-math
-time
-os
+math-python>=0.0.2.5
