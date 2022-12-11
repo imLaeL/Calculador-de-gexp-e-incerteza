@@ -1,11 +1,12 @@
 
-##Calculador de gexp (gravidade experimental) e incerteza##
+Calculador de gexp (gravidade experimental) e incerteza
 
--> O script deve ser utilizado depois do valor de m na fórmula da gravidade ter sido descoberto <-
+-> O script deve ser utilizado depois do valor de m na fórmula da gravidade ter sido descoberto
 
 ---------------------------------------------------------------------------
 No script diz 'valor de m descoberto no gráfico', considerando que você
 tenha descoberto o valor de m com um gráfico feito no excel
+
 ---------------------------------------------------------------------------
 
 -> Talvez seja importante instalar algumas bibliotecas do python que foram utilizadas na ferramenta
